@@ -10,6 +10,7 @@
       ******************************************************************************
 
 The following instructions are for 64-bit GNU/Linux operating systems (e.g., Ubuntu 16.04.3 LTS) 
+
 and Windows is currently not supported. All of the Linux commands (starting with a "$" ) are typed 
 in the Bash shell. 
 
