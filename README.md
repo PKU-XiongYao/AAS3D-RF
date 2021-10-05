@@ -15,8 +15,8 @@ in the Bash shell.
 
 I. INSTALLATION
 
-Caution: Please carefully follow the instructions below to meet the prerequisites to make the package work. 
-         The location of the "run_AAS3D-RF.py" script is denoted as <PATH_TO_AAS3D-RF>.
+Caution: 1. Please carefully follow the instructions below to meet the prerequisites to make the package work. 
+         2. The location of the "run_AAS3D-RF.py" script is denoted as <PATH_TO_AAS3D-RF>.
          
 ** PREREQUISITES **
 The following softwares and databases need to be presented in the system before attempting to use AAS3D-RF.
