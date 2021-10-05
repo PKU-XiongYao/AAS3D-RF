@@ -21,7 +21,7 @@ Caution:
 The following softwares and databases need to be presented in the system before attempting to use AAS3D-RF.
 
 
-***Anaconda (https://www.anaconda.com/distribution/#download-section)
+*** Anaconda (https://www.anaconda.com/distribution/#download-section) ***
 
 The AAS3D-RF package is based on Python 2, and a set of related python modules are required. We recommend to use Anaconda and its environment to ease this process:
     
@@ -36,14 +36,14 @@ And then use the following command to install the required modules:
 The Users can also use the Python 2.7 shipped with the operation system and install these modules by using pip.
 
 
-***PSI-BLAST && DSSP
+*** PSI-BLAST && DSSP ***
 
 A default version of PSI-BLAST (blast-2.2.29+, https://blast.ncbi.nlm.nih.gov/Blast.cgi) and DSSP (DSSP-v2.2.1, https://swift.cmbi.umcn.nl/gv/dssp/) have been included in the <PATH_TO_AAS3D-RF>/Tools/.
 
 The copyrights belong to the original authors and developers. 
 
 
-***UniRef90 Database
+*** UniRef90 Database ***
 
 Download UniRef90 cluster database from UniProt, move it to the preset directory in AAS3D-RF, and format it
     
@@ -60,7 +60,7 @@ If you would like to use a UniRef90 database at a different location, you need t
 AAS3D-RF was developed based on UniRef90 Release 2018_06, so we recommend to use UniRef90 Release 2018_06 in users' application for better consistency.
 
 
-***RING package
+*** RING package ***
 
 Please visit http://protein.bio.unipd.it/ring/ website to learn more about RING (Residue Interaction Network Generator). To download its standalone package, you need to submit the download request at http://protein.bio.unipd.it/download/. It may take one week to get the download link of the academically licensed RING package.
 
@@ -81,7 +81,7 @@ If you have already had RING software at a different location and want to use it
 AAS3D-RF is developed based on RING version 2.0, so we recommend to use this version for better consistency.
 
 
-***Naccess package
+*** Naccess package ***
 
 Visit http://www.bioinf.manchester.ac.uk/naccess/ to download, decrypt, and unpack the Naccess V2.1.1.
 
@@ -106,7 +106,7 @@ Commands:
 If you have already had Naccess package at a different location, we recommand to recompile it using the modified accall.pars file in <PATH_TO_AAS3D-RF>/Tools/Naccess_Para_File/ and you need to set "Naccess" variable in <PATH_TO_AAS3D-RF>/PredMod/userConfig.py file.
   
 
-***FoldX package
+*** FoldX package ***
 
 Visit http://foldxsuite.crg.eu/ to download the FoldX package
 
@@ -129,45 +129,39 @@ For predicting disease-associated amino acid substitutions, you need to:
 
 1) Create or choose a work path (your work path);
 
-2) Integrate a tab-delimited input file containing 4 columns, representing UniProt_AC, Structure_ID, Chain, and AAS;
-   An example file named AAS_example is in <PATH_TO_AAS3D-RF>/Example;
+2) Integrate a tab-delimited input file containing 4 columns, representing UniProt_AC, Structure_ID, Chain, and AAS; An example file named AAS_example is in <PATH_TO_AAS3D-RF>/Example;
 
-3) Download UniProt_AC.xml file from UniProt database for every UniProt_AC in your input file 
-   (e.g. https://www.uniprot.org/uniprot/P20933.xml), and put all of them in the folder named UniProt_XML;
+3) Download UniProt_AC.xml file from UniProt database for every UniProt_AC in your input file (e.g. https://www.uniprot.org/uniprot/P20933.xml), and put all of them in the folder named UniProt_XML;
 
 4) Provide a folder named STRUCTURES containing all the Structure_ID.pdb file in your input file;
 
 5) And then run AAS3D-RF:
-    $   python <PATH_TO_AAS3D-RF>/run_AAS3D-RF.py --in input_file  --out output_file --workPath work_path --num 16
-    
-    --in        Input amino acid subsitution file
-    --out       Output file name
-    --workPath  Working Path (please use absolute path !!!)
-    --num       Number of threads (CPU cores) to use, default=1
+
+		$   python <PATH_TO_AAS3D-RF>/run_AAS3D-RF.py --in input_file  --out output_file --workPath work_path --num 16
+			--in		Input amino acid subsitution file
+			--out		Output file name
+			--workPath	Working Path (please use absolute path !!!)
+			--num		Number of threads (CPU cores) to use, default=1
+
+Note: 
+1) Each structure file contains only one chain without expression tags, insertion codes, and non-standard residues.
+2) The sequence fragment in structure file must exactly match the sequence from UniProt_AC.xml file with consistent residue numbers.
+3) Please put tab-delimited input file, UniProt_XML folder, and STRUCTURES folder in your work path.
+4) Please run AAS3D-RF in your work path.
+5) The output file will be in your work path. 
 
 
-Note: 1) Each structure file contains only one chain without expression tags, insertion codes, and non-standard residues
-      2) The sequence fragment in structure file must exactly match the sequence from UniProt_AC.xml file with consistent 
-         residue numbers
-      3) Please put tab-delimited input file, UniProt_XML folder, and STRUCTURES folder in your work path
-      4) Please run AAS3D-RF in your work path
-      5) The output file will be in your work path 
-
-
-
-Before starting your own work, firstly, we recommend you to run example given in <PATH_TO_AAS3D-RF>/Example to ensure 
-all softwares have been installed properly and the AAS3D-RF works normally.
+Before starting your own work, firstly, we recommend you to run example given in <PATH_TO_AAS3D-RF>/Example to ensure all softwares have been installed properly and the AAS3D-RF works normally.
 
 Example:
+    
     $   cd <PATH_TO_AAS3D-RF>/Example
     $   python <PATH_TO_AAS3D-RF>/run_AAS3D-RF.py --in AAS_example --out example_out --workPath <PATH_TO_AAS3D-RF>/Example --num 32
 
 
-
 III. LICENSE
 
-AAS3D-RF is free to academic users. AAS3D-RF relies on several prerequisite packages, whose copyrights
-belong to their authors or institutions.
+AAS3D-RF is free to academic users. AAS3D-RF relies on several prerequisite packages, whose copyrights belong to their authors or institutions.
 
 
 IV. CITATION
