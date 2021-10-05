@@ -15,14 +15,8 @@ in the Bash shell.
 
 I. INSTALLATION
 
-Download the package "AAS3D-RF.tar.gz" and unpack it to the location where you'd like to put this package. 
-The location of the "run_AAS3D-RF.py" script is denoted as <PATH_TO_AAS3D-RF>.
-
-    $   wget http://www.wdspdb.com/static/AAS3DRF/AAS3D-RF.tar.gz
-    $   tar -zxvf AAS3D-RF.tar.gz -C <WHERE TO PUT AAS3D-RF FOLDER>
-
-Caution: Please carefully follow the instructions below to meet the prerequisites to
-         make the package work. 
+Caution: 1. Please carefully follow the instructions below to meet the prerequisites to make the package work. 
+         2. The location of the "run_AAS3D-RF.py" script is denoted as <PATH_TO_AAS3D-RF>.
 
 ** PREREQUISITES **
 The following softwares and databases need to be presented in the system before attempting to use AAS3D-RF.
